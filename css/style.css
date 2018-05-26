@@ -136,7 +136,9 @@ button, input, optgroup, select, textarea {
   margin: 0; }
 
 .container {
-  max-width: 380px;
+  width: 380px;
+  padding:0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center; }
