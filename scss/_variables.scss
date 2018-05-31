@@ -1,0 +1,43 @@
+// TEXT //
+
+$heading-main:16px;
+$text:14px;
+
+
+// COLORS // 
+$white:#f2f2f2;
+
+$gray1: #d9d9d9;
+$gray2: #a6a6a6;
+$gray3: #595959;
+$gray4: #404040;
+
+
+
+// FONTS ///
+
+$main-font: 'Open sans', sans-serif;
+$text-font: 'Raleway';
+
+
+//MIXINS //
+
+@mixin heading-title($weight,$color){
+    font-family: 'Open sans', sans-serif;
+    font-weight: $weight;
+    font-size: $heading-main;
+    color: $color;
+}
+
+
+
+@mixin display-flex{
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+@mixin flex-center{
+    justify-content: center;
+    align-items: center;
+}
