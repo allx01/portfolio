@@ -1,5 +1,8 @@
 .header {
     position: relative;
+    position: fixed;
+        top: 0;
+        z-index: 2;
     width: 100%;
     height: auto;
     display: flex;
@@ -7,6 +10,10 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba($color: #fff, $alpha: 1);
+
+    -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
     .title {
         display: flex;
         display: -webkit-flex;
@@ -41,7 +48,7 @@
         }
         &__item {
             background-color: $white;
-            border-bottom: 1px solid $gray4;
+            border-bottom: 1px solid $gray1;
             margin: 0;
             padding: 0;
             &:last-child {
@@ -100,14 +107,10 @@
 
 @media (min-width:768px) {
     .header {
-        position: fixed;
-        top: 0;
-        z-index: 2;
-        -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+        
+       
         .title {
-            font-size: 118px;
+            
         }
         .nav {
             height: auto;
