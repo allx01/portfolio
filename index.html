@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="icon" href="favicon.ico">
     <title>Aleksandar Savkovic</title>
 </head>
 
@@ -22,7 +22,7 @@
                    c1,0,1.5-1.1,1.1-1.9l-38.5-66.4c-0.5-0.8-1.7-0.8-2.2,0L36.1,177.3C35.6,178.1,36.2,179.2,37.2,179.2z"
                     />
                 </svg>
-                <div class="title__name">Aleksandar Savković</div>
+                <p class="title__name">Aleksandar Savković</p>
             </div>
             <div class="nav">
                 <li class="nav__item">
@@ -42,13 +42,31 @@
                 <div class="hamburger"></div>
             </div>
         </div>
+        <!--END OF HEADER-->
+        <div class="img">
+            <div class="img__overlay"></div>
+            <p class="img__text">FRONT END DEVELOPER & FREELANCER</p>
+        </div>
+        <!--END OF IMG-->
+        <div class="about">
+            <div class="about__title">ABOUT</div>
+            <div class="wrap">
+                <img class="wrap__img" src="img/prof.jpg" alt="prof">
+                <div class="wrap__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nobis soluta eaque eligendi commodi
+                    dolorum aliquid iure fuga neque iusto nulla libero delectus, modi laudantium unde perferendis. Consequuntur
+                    provident illum vitae assumenda esse soluta ipsam eligendi. Adipisci, Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Tempore explicabo similique officiis porro, perspiciatis aliquam ex dolor. Cupiditate,
+                    commodi magnam? aspernatur? Molestiae?</div>
+            </div>
+        </div>
+        <!--END OF ABOUT-->
     </div>
 
     <script>
         $('.toggle').click(function () {
-            $('.nav').toggleClass('nav--open', 500);
+            $('.nav').toggleClass('nav--open');
             $(this).toggleClass('open');
-        })
+        });
     </script>
 </body>
 

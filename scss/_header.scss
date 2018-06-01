@@ -6,7 +6,8 @@
     display: -webkit-flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $gray4;
+    background-color: rgba($color: #fff, $alpha: 1);
+    
     .title {
         display: flex;
         display: -webkit-flex;
@@ -16,30 +17,33 @@
         &__logo {
             width: 50px;
             height: 100%;
-            fill: $white;
+            fill: #000;
         }
         &__name {
             text-transform: uppercase;
             font-size: $heading;
-            font-family: 'Comfortaa';
             font-weight: 800;
-            color: $white;
+            fill: $gray4;
         }
     }
     .nav {
+        
         position: absolute;
         top: 100%;
         right: 0;
-        
+        z-index: 1;
+        -webkit-clip-path: circle(0px at top right);
         clip-path: circle(0px at top right);
+        -webkit-transition: all ease-in-out 500ms;
         transition: all ease-in-out 500ms;
         &--open {
             height: auto;
+            -webkit-clip-path: circle(150% at top right);
             clip-path: circle(150% at top right);
         }
         &__item {
-            background-color: $gray3;
-            border-bottom: 1px solid $gray2;
+            background-color: $white;
+            border-bottom: 1px solid $gray4;
             margin: 0;
             padding: 0;
             &:last-child {
@@ -47,12 +51,12 @@
             }
             >a {
                 display: block;
-                color: $gray1;
+                color: $gray4;
                 text-transform: uppercase;
                 padding: 20px 35px;
                 &:hover {
                     background-color: $gray1;
-                    color: $gray3;
+                    color: #000;
                 }
             }
         }
@@ -60,33 +64,38 @@
     .toggle {
         padding: 15px;
         position: absolute;
-        right: 20px;
+        right: 15px;
         cursor: pointer;
         .hamburger,
         .hamburger::before,
         .hamburger::after {
             content: '';
             display: block;
-            background: $white;
+            background: $gray4;
             height: 3px;
             width: 30px;
             border-radius: 3px;
+            -webkit-transition: all ease-in-out 500ms;
             transition: all ease-in-out 500ms;
         }
         .hamburger::before {
+            -webkit-transform: translateY(-7px);
             transform: translateY(-7px);
         }
         .hamburger::after {
+            -webkit-transform: translateY(4px);
             transform: translateY(4px);
         }
     }
     .open .hamburger{
+        -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
     }
     .open .hamburger::before{
         opacity: 0;
     }
     .open .hamburger::after{
+        -webkit-transform: translateY(-3px) rotate(-90deg);
         transform: translateY(-3px) rotate(-90deg);
     }
 }
@@ -108,10 +117,11 @@
             
                 >a{
                     padding: 10px 15px;
+                    color: $gray3;
                     &:hover{
                         background: none;
-                        opacity: 0.8;
-                        color: $gray1;
+                        color: #000;
+                        
                     }
                 }
             }
