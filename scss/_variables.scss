@@ -1,6 +1,6 @@
 // TEXT //
 
-$heading-main:16px;
+$heading:16px;
 $text:14px;
 
 
@@ -20,24 +20,3 @@ $main-font: 'Open sans', sans-serif;
 $text-font: 'Raleway';
 
 
-//MIXINS //
-
-@mixin heading-title($weight,$color){
-    font-family: 'Open sans', sans-serif;
-    font-weight: $weight;
-    font-size: $heading-main;
-    color: $color;
-}
-
-
-
-@mixin display-flex{
-    display: -webkit-flex;
-    display: flex;
-}
-
-
-@mixin flex-center{
-    justify-content: center;
-    align-items: center;
-}

@@ -4,88 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <title>Aleksandar Savkovic</title>
 </head>
 
 <body>
     <div class="container">
-
-        <!-- HEADER-->
-        <header class="header">
+        <div class="header">
             <div class="title">
-                <img src="img/logo.svg" alt="logo" class="title__logo">
-                <p class="title__name">
-                    ALEKSANDAR SAVKOVIĆ
-                </p>
+                <svg class="title__logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 238 264" style="enable-background:new 0 0 238 264;" xml:space="preserve">
+                    <path d="M37.2,179.2h14.3c0.4,0,0.9-0.2,1.1-0.6l13.1-22.4c0.2-0.4,0.6-0.6,1.1-0.6H162c0.4,0,0.9,0.2,1.1,0.6l28.9,49
+                   c0.5,0.8-0.1,1.9-1.1,1.9H20.2c-0.4,0-0.9,0.2-1.1,0.6l-7.5,12.7c-0.5,0.8,0.1,1.9,1.1,1.9h204.1c1,0,1.6-1,1.1-1.9l-46.6-80.3
+                   c-0.2-0.4-0.6-0.6-1.1-0.6l-93-0.2c-1,0-1.6-1-1.1-1.9l37.5-64.8c0.5-0.8,1.7-0.8,2.2,0l21.7,38.4c0.2,0.4,0.7,0.6,1.1,0.6l14.6-0.2
+                   c1,0,1.5-1.1,1.1-1.9l-38.5-66.4c-0.5-0.8-1.7-0.8-2.2,0L36.1,177.3C35.6,178.1,36.2,179.2,37.2,179.2z"
+                    />
+                </svg>
+                <div class="title__name">Aleksandar Savković</div>
             </div>
-            <nav class="nav">
+            <div class="nav">
                 <li class="nav__item">
-                    <a href="#">About Me</a>
+                    <a href="#">About</a>
                 </li>
                 <li class="nav__item">
                     <a href="#">Skills</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#">Contact Me</a>
+                    <a href="#">Work</a>
                 </li>
-            </nav>
-        </header>
-
-        <!-- SECTION A-->
-        <section class="section-a">
-            <div class="wrap">
-            <div class="img"></div>
-        </div>
-            <div class="title">
-                <p class="title__name">JUNIOR FRONT END DEVELOPER</p>
-                <p class="title__name">
-                    <span>&amp;</span> FREELANCER</p>
+                <li class="nav__item">
+                    <a href="#">Contact</a>
+                </li>
             </div>
-           
-
-        </section>
-
-        <!-- SECTION B-->
-        <section class="section-b">
-            <div class="wrap"> 
-            <div class="title">
-                <p class="title__top">
-                    &#60;about&#62;
-                </p>
-            </div>
-            <div class="main">
-                <img src="img/prof.jpg" alt="prof" class="main__img">
-                <p class="main__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolor modi cumque ullam corporis facilis doloremque
-                    asperiores enim, fugit odio. Illum animi tenetur, voluptatem dolor numquam vitae? Aliquid ex minima ipsa
-                    labore recusandae quibusdam consequuntur natus vel quaerat quidem! Hic, ex perspiciatis. Eligendi, modi
-                    aliquid voluptatibus sunt deserunt recusandae repudiandae corporis quidem reprehenderit ducimus quis
-                    illo laudantium veniam esse perferendis.</p>
-            </div>
-            <div class="title">
-                <p class="title__bot"> &#60;/about&#62;</p>
-            </div>
-        </div>  
-        </section>
-
-        <!-- SECTION C-->
-        <section class="section-c">
-            <div class="wrap">
-            <div class="title">
-                <p class="title__item">#skills</p>
-            </div>
-            <div class="main">
-                <span>{</span>
-                    <div class="main__item"><span>html</span>: <span class="strong">strong</span>;</div>
-                    <div class="main__item"><span>css</span>: <span class="strong">strong</span>;</div>
-                    <div class="main__item"><span>javascript</span>: <span class="thin">thin</span>;</div>
-                <span>}</span>
+            <div class="toggle">
+                <div class="hamburger"></div>
             </div>
         </div>
-        </section> 
     </div>
 
+    <script>
+        $('.toggle').click(function () {
+            $('.nav').toggleClass('nav--open', 500);
+            $(this).toggleClass('open');
+        })
+    </script>
 </body>
 
 </html>
