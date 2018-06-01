@@ -26,7 +26,7 @@
             </div>
             <div class="nav">
                 <li class="nav__item">
-                    <a href="#">About</a>
+                    <a href="index.html#about">About</a>
                 </li>
                 <li class="nav__item">
                     <a href="#">Skills</a>
@@ -48,7 +48,7 @@
             <p class="img__text">FRONT END DEVELOPER & FREELANCER</p>
         </div>
         <!--END OF IMG-->
-        <div class="about">
+        <div class="about" id="about">
             <div class="about__title">ABOUT</div>
             <div class="wrap">
                 <img class="wrap__img" src="img/prof.jpg" alt="prof">
@@ -60,6 +60,7 @@
             </div>
         </div>
         <!--END OF ABOUT-->
+        
     </div>
 
     <script>
@@ -67,6 +68,42 @@
             $('.nav').toggleClass('nav--open');
             $(this).toggleClass('open');
         });
+
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top -50
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
     </script>
 </body>
 

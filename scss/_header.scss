@@ -7,7 +7,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba($color: #fff, $alpha: 1);
-    
     .title {
         display: flex;
         display: -webkit-flex;
@@ -27,7 +26,6 @@
         }
     }
     .nav {
-        
         position: absolute;
         top: 100%;
         right: 0;
@@ -87,51 +85,52 @@
             transform: translateY(4px);
         }
     }
-    .open .hamburger{
+    .open .hamburger {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
     }
-    .open .hamburger::before{
+    .open .hamburger::before {
         opacity: 0;
     }
-    .open .hamburger::after{
+    .open .hamburger::after {
         -webkit-transform: translateY(-3px) rotate(-90deg);
         transform: translateY(-3px) rotate(-90deg);
     }
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
     .header {
-        .title{
-
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+        .title {
+            font-size: 118px;
         }
-        .nav{
+        .nav {
             height: auto;
             position: relative;
             display: flex;
             flex-direction: row;
             clip-path: initial;
-            &__item{
+            &__item {
                 border-bottom: none;
                 background-color: transparent;
-            
-                >a{
+                >a {
                     padding: 10px 15px;
                     color: $gray3;
-                    &:hover{
+                    &:hover {
                         background: none;
                         color: #000;
-                        
                     }
                 }
             }
         }
-        .toggle{
+        .toggle {
             display: none;
-            .hamburger{
-
-            }
+            .hamburger {}
         }
-        
     }
 }

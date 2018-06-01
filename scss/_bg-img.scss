@@ -24,3 +24,19 @@
         
     }
 }
+
+@media (min-width:768px) {
+    .img{
+        
+        height: 600px;
+        
+        &__overlay{
+           
+            
+        }
+        &__text{
+            font-size: 38px;
+            
+        }
+    }
+}
