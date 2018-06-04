@@ -22,9 +22,10 @@
       fill: #000; }
     .header .title__name {
       text-transform: uppercase;
-      font-size: 16px;
+      font-family: 'Comfortaa';
       font-weight: 800;
-      fill: #404040; }
+      fill: #404040;
+      font-size: 20px; }
   .header .nav {
     position: absolute;
     top: 100%;
@@ -116,7 +117,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to right top, #051937, #004d7a, #008793);
-    opacity: 0.4; }
+    opacity: 0.6; }
   .img__text {
     color: #f2f2f2;
     font-size: 28px;
@@ -140,7 +141,8 @@
   display: -webkit-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  height: 500px; }
   .about__title {
     font-family: "Open sans", sans-serif;
     font-size: 22px;
@@ -191,13 +193,14 @@
   display: -webkit-flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right top, #051937, #004d7a, #008793);
-  margin: 20px 0; }
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+  margin: 20px 0;
+  height: 500px; }
   .skills__title {
     font-family: "Open sans", sans-serif;
     font-size: 22px;
     font-weight: 600;
-    margin: 20px 0 30px;
+    margin: 60px 0 30px 0;
     color: #fff; }
   .skills .html,
   .skills .css,
@@ -205,28 +208,114 @@
     max-width: 350px;
     display: flex;
     justify-content: center;
-    height: 100%;
+    max-height: 75px;
     width: 90%;
     background: rgba(255, 255, 255, 0.3);
     color: #595959;
-    margin-top: 20px;
+    margin-bottom: 50px;
     border-radius: 4px; }
     .skills .html__list,
     .skills .css__list,
     .skills .js__list {
-      padding: 10px 0 0 0;
-      text-align: center;
-      flex: 1;
-      background: rgba(255, 255, 255, 0.3); }
+      position: relative;
+      color: #f2f2f2;
+      flex: 1; }
+      .skills .html__list span,
+      .skills .css__list span,
+      .skills .js__list span {
+        color: #051937;
+        justify-content: center;
+        align-items: center; }
   .skills svg {
-    margin: 10px;
     width: 25%;
     height: 100%;
     padding: 10px;
     align-self: center;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.9); }
+  .skills .html__list > .div {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    text-align: center;
+    width: 75%;
+    height: 100%;
+    color: #fff;
+    padding: 20px 0 0 0;
+    font-family: 'Comfortaa';
+    font-size: 40px;
+    background: #fc6a36; }
   .skills .css {
     flex-direction: row-reverse; }
+    .skills .css__list {
+      display: flex;
+      flex-direction: row-reverse; }
+      .skills .css__list > .div {
+        color: #fff;
+        font-family: 'Comfortaa';
+        font-size: 35px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        position: absolute;
+        text-align: center;
+        width: 60%;
+        height: 100%;
+        background: #1dcffc;
+        padding: 20px 0 0 0; }
+  .skills .js__list > .div {
+    color: #fff;
+    padding: 20px 0 0 0;
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    background: #faed3e; }
+
+@media (min-width: 768px) {
+  .skills .html,
+  .skills .css,
+  .skills .js {
+    max-width: 600px; }
+  .skills .html {
+    margin-left: -100px; }
+  .skills .css {
+    margin-right: -100px; }
+  .skills .js {
+    margin-left: -100px; } }
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .work p {
+    font-size: 28px;
+    font-weight: 800;
+    opacity: 0.2; }
+  .work__title {
+    font-family: "Open sans", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 60px 0 30px 0;
+    color: #404040; }
+  .work .gallery__item {
+    border: 3px solid #d9d9d9;
+    border-radius: 5px;
+    margin: 20px; }
+    .work .gallery__item > img {
+      width: 250px;
+      border-radius: 5px; }
+
+@media (min-width: 768px) {
+  .work .gallery {
+    margin-top: 50px;
+    display: flex; }
+    .work .gallery__item > img {
+      padding: 0; } }
 
 *, :before, :after {
   margin: 0;
