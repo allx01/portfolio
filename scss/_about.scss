@@ -3,14 +3,13 @@
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 500px;
     &__title {
         font-family: $main-font;
         font-size: 22px;
         font-weight: 600;
-        margin-top: 20px;
         color: $gray4;
+        padding: 30px 0 50px 0;
     }
     .wrap {
         display: flex;
@@ -18,15 +17,15 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 20px 0 30px 0;
+       
         &__img {
             width: 150px;
             height: 100%;
             border-radius: 50%;
             margin-bottom: 10px;
-            -webkit-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.75);
-            -moz-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.75);
-            box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.75);
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.75);
         }
         &__text {
             font-size: 14px;
@@ -45,13 +44,13 @@
     .about {
         &__title {}
         .wrap {
-            margin-top: 50px;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            margin: 30px 0 0 0;
             &__img {
-                margin-right: 25px;
+                margin-right: 35px;
                 width: 250px;
             }
             &__text {
