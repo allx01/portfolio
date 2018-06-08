@@ -192,11 +192,11 @@
   display: -webkit-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   position: relative;
-  padding-bottom: 75px; }
+  padding-bottom: 75px;
+  min-height: 600px; }
   .skills__title {
+    text-align: center;
     font-family: "Open sans", sans-serif;
     font-size: 22px;
     font-weight: 600;
@@ -210,42 +210,50 @@
     z-index: -1;
     position: absolute;
     top: 0; }
-  .skills .list-item {
-    padding: 25px 0 5px;
-    border-bottom: 8px solid rgba(92, 241, 255, 0.3); }
-    .skills .list-item:nth-child(1) {
-      width: 130px;
-      border-color: #e96e50; }
-    .skills .list-item:nth-child(2) {
-      width: 110px;
-      border-color: #118fe4; }
-    .skills .list-item:nth-child(3) {
-      width: 40px;
-      border-color: #F0DB4F; }
-    .skills .list-item:nth-child(4) {
-      width: 70px;
-      border-color: #EA2D2F; }
-    .skills .list-item:nth-child(5) {
-      width: 40px;
-      border-color: #269ee4; }
-    .skills .list-item:nth-child(6) {
-      width: 100px;
-      border-color: #26e46f; }
-    .skills .list-item__title {
-      color: #f2f2f2;
-      font-weight: 500; }
-    .skills .list-item li {
-      list-style: disc;
-      font-size: 14px;
-      font-weight: 300;
-      min-width: 200px;
-      color: #f4f4f4; }
+  .skills .list {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .skills .list-item {
+      padding: 25px 0 5px;
+      border-bottom: 8px solid rgba(92, 241, 255, 0.3); }
+      .skills .list-item:nth-child(1) {
+        width: 130px;
+        border-color: #e96e50; }
+      .skills .list-item:nth-child(2) {
+        width: 110px;
+        border-color: #118fe4; }
+      .skills .list-item:nth-child(3) {
+        width: 40px;
+        border-color: #F0DB4F; }
+      .skills .list-item:nth-child(4) {
+        width: 70px;
+        border-color: #EA2D2F; }
+      .skills .list-item:nth-child(5) {
+        width: 40px;
+        border-color: #269ee4; }
+      .skills .list-item:nth-child(6) {
+        width: 100px;
+        border-color: #26e46f; }
+      .skills .list-item__title {
+        color: #f2f2f2;
+        font-weight: 500; }
+      .skills .list-item li {
+        list-style: disc;
+        font-size: 14px;
+        font-weight: 300;
+        min-width: 200px;
+        color: #f4f4f4; }
 
 @media (min-width: 768px) {
   .skills .list {
+    margin-top: 100px;
     font-size: 130%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     min-width: 200px;
     flex-wrap: wrap; }
     .skills .list-item {
