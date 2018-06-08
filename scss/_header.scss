@@ -1,5 +1,7 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     width: 100%;
     height: auto;
     display: flex;
@@ -33,7 +35,7 @@
         position: absolute;
         top: 100%;
         right: 0;
-        z-index: 1;
+        
         -webkit-clip-path: circle(0px at top right);
         clip-path: circle(0px at top right);
         -webkit-transition: all ease-in-out 500ms;

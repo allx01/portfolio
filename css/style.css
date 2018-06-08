@@ -1,5 +1,7 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 1;
   width: 100%;
   height: auto;
   display: flex;
@@ -29,7 +31,6 @@
     position: absolute;
     top: 100%;
     right: 0;
-    z-index: 1;
     -webkit-clip-path: circle(0px at top right);
     clip-path: circle(0px at top right);
     -webkit-transition: all ease-in-out 500ms;
@@ -194,7 +195,7 @@
   align-items: center;
   position: relative;
   padding-bottom: 75px;
-  min-height: 600px; }
+  min-height: 500px; }
   .skills__title {
     text-align: center;
     font-family: "Open sans", sans-serif;
@@ -248,7 +249,7 @@
 
 @media (min-width: 768px) {
   .skills .list {
-    margin-top: 100px;
+    margin-top: 75px;
     font-size: 130%;
     display: flex;
     justify-content: center;

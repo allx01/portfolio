@@ -3,9 +3,10 @@
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
+    
     position: relative;
     padding-bottom: 75px;
-    min-height: 600px;
+    min-height: 500px;
     &__title{
         text-align: center;
         font-family: $main-font;
@@ -29,6 +30,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
         
         
         &-item{
@@ -85,8 +87,11 @@
 @media (min-width:768px) {
     .skills{
         
+        &__title{
+            
+        }
         .list{
-            margin-top: 100px;
+            margin-top: 75px;
             font-size: 130%;
             display: flex;
             justify-content: center;
