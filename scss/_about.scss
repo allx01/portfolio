@@ -45,10 +45,9 @@
     .about {
         &__title {}
         .wrap {
-            display: flex;
+            
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
+           
             margin: 30px 0 0 0;
             &__img {
                 margin-right: 35px;
