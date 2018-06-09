@@ -45,7 +45,8 @@
       margin: 0;
       padding: 0; }
       .header .nav__item:last-child {
-        border-bottom: none; }
+        border-bottom: none;
+        background: #9affc7; }
       .header .nav__item > a {
         display: block;
         color: #404040;
