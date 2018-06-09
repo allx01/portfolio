@@ -25,7 +25,7 @@
     .header .title__name {
       text-transform: uppercase;
       font-weight: 600;
-      fill: #404040;
+      color: #404040;
       font-size: 17px; }
   .header .nav {
     position: absolute;
